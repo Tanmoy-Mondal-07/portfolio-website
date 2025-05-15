@@ -4,7 +4,8 @@ import ProjectCard from "../component/ProjectCard";
 import ContactForm from "../component/ContactForm";
 import myLogo from "../assets/logo00.svg"
 import background from "../assets/pngegg.png"
-import linething from "../assets/design.svg"
+import DanteThumbnail from "../assets/Dantethumbnail.png"
+import Certificate from "../component/Certificate";
 
 export default function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -20,8 +21,8 @@ export default function Hero() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-6">
-            <a href="/#portfolio" className="text-sm font-medium hover:text-gray-600 transition-colors">
-              Portfolio
+            <a href="/#projects" className="text-sm font-medium hover:text-gray-600 transition-colors">
+              Projects
             </a>
             <a href="/#about" className="text-sm font-medium hover:text-gray-600 transition-colors">
               About
@@ -45,8 +46,8 @@ export default function Hero() {
         {mobileNavOpen && (
           <nav className="md:hidden bg-white border-t">
             <div className="flex flex-col gap-4 p-4">
-              <a href="/#portfolio" className="text-lg font-medium hover:text-gray-600 transition-colors">
-                Portfolio
+              <a href="/#projects" className="text-lg font-medium hover:text-gray-600 transition-colors">
+                Projects
               </a>
               <a href="/#about" className="text-lg font-medium hover:text-gray-600 transition-colors">
                 About
@@ -60,15 +61,15 @@ export default function Hero() {
       </header>
 
       <main className="flex-1">
-        <section className="relative overflow-hidden py-24 md:py-8">
+        <section className="relative overflow-hidden py-24 md:py-16">
           <div className="container mx-auto flex flex-col items-center text-center px-4">
-            {/* <div className="absolute z-10 -top-40 -left-8 md:-top-28 inset-0 opacity-90">
-              <img
+            <div className="absolute -z-10 -top-40 -left-8 md:-top-28 inset-0 opacity-90">
+              {/* <img
                 src={background}
                 alt="Background"
                 className="h-full w-full object-cover"
-              />
-            </div> */}
+              /> */}
+            </div>
             <img
               src={myLogo}
               alt="tanmoy img"
@@ -80,7 +81,7 @@ export default function Hero() {
               Frontend Developer
               {/* Elegant Design <br /> Timeless Aesthetics */}
             </h1>
-            <p className="mb-8 max-w-[600px] z-20 text-gray-600 md:text-xl">
+            <p className="mb-8 max-w-[600px] -z-20 text-gray-600 md:text-xl">
               {/* Crafting minimalist experiences that embody the essence of traditional Japanese artistry with modern
               design principles. */}
               Building lean, minimalist solutions that prioritize simplicity and functionality.Where true elegance
@@ -99,18 +100,21 @@ export default function Hero() {
           </div>
         </section>
 
-        <section id="portfolio" className="py-20 bg-gray-50">
+        <section id="projects" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Portfolio
+              Projects
             </h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               <ProjectCard
                 title="Dante"
-                description="Minimalist branding inspired by traditional Japanese ink painting techniques."
-                imageSrc={background}
+                description="Dantay is a minimalist social media app built with React.js and Appwrite, 
+                designed for a fast and smooth user experience. It uses cookies, service workers, 
+                IndexedDB, and local storage to cache stable data, reducing server load and improving 
+                performance. The app also features subtle design details that enhance usability beyond 
+                what’s immediately visible."
+                imageSrc={DanteThumbnail}
                 href="https://dantetestserver.pages.dev/"
-                linething={linething}
               />
               {/* ...other ProjectCards... */}
             </div>
@@ -154,6 +158,13 @@ export default function Hero() {
         </section>
 
         <section id="contact" className="py-20 bg-gray-50">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Certificate
+          </h2>
+          <Certificate/>
+        </section>
+
+        <section id="contact" className="py-20">
           <div className="container mx-auto px-4">
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tighter sm:text-4xl">Contact</h2>
             <div className="mx-auto max-w-2xl">

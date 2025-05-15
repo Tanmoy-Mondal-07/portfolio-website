@@ -1,10 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
-// import PropTypes from "prop-types";
 
-export default function ProjectCard({ title, description, imageSrc, href, linething }) {
+export default function ProjectCard({ title, description, imageSrc, href }) {
   return (
     <div className="overflow-hidden rounded-lg border border-gray-200 transition-shadow hover:shadow-lg">
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="relative aspect-[16/10] w-full overflow-hidden">
         <img
           src={imageSrc || "/placeholder.svg"}
           alt={title}
@@ -23,21 +22,7 @@ export default function ProjectCard({ title, description, imageSrc, href, lineth
           View Project
           <ArrowUpRight className="ml-1 h-4 w-4" />
         </a>
-        <div className="absolute inset-25">
-        <img
-          src={linething}
-          alt={title}
-          className="h-100 w-100 -z-10 object-cover"
-        />
-        </div>
       </div>
     </div>
   );
 }
-
-// ProjectCard.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   description: PropTypes.string,
-//   imageSrc: PropTypes.string,
-//   href: PropTypes.string,
-// };
