@@ -157,12 +157,7 @@ export default function Hero() {
           </div>
         </section>
 
-        <section id="contact" className="py-20 bg-gray-50">
-          <h2 className="mb-12 text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Certificate
-          </h2>
-          <Certificate/>
-        </section>
+        <Certificate />
 
         <section id="contact" className="py-20">
           <div className="container mx-auto px-4">
