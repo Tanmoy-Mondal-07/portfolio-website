@@ -44,7 +44,7 @@ export default function ContactForm() {
     }
 
     setIsSubmitting(false);
-    // setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   return (
@@ -83,7 +83,7 @@ export default function ContactForm() {
           type="text"
           value={formData.subject}
           onChange={handleChange}
-          placeholder="Project inquiry"
+          placeholder="Subject....."
           required
           className="w-full border px-3 py-2 rounded"
         />
@@ -95,7 +95,7 @@ export default function ContactForm() {
           id="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Tell me about your project..."
+          placeholder="Message....."
           className="w-full border px-3 py-2 rounded min-h-[150px]"
           required
         />

@@ -27,6 +27,9 @@ export default function Hero() {
             <a href="/#about" className="text-sm font-medium hover:text-gray-600 transition-colors">
               About
             </a>
+            <a href="/#certificate" className="text-sm font-medium hover:text-gray-600 transition-colors">
+              Certificate
+            </a>
             <a href="/#contact" className="text-sm font-medium hover:text-gray-600 transition-colors">
               Contact
             </a>
@@ -51,6 +54,9 @@ export default function Hero() {
               </a>
               <a href="/#about" className="text-lg font-medium hover:text-gray-600 transition-colors">
                 About
+              </a>
+              <a href="/#certificate" className="text-lg font-medium hover:text-gray-600 transition-colors">
+                Certificate
               </a>
               <a href="/#contact" className="text-lg font-medium hover:text-gray-600 transition-colors">
                 Contact
@@ -116,7 +122,7 @@ export default function Hero() {
                 imageSrc={DanteThumbnail}
                 href="https://dantetestserver.pages.dev/"
               />
-              {/* ...other ProjectCards... */}
+              {/*moreProjectCards*/}
             </div>
           </div>
         </section>
@@ -125,20 +131,20 @@ export default function Hero() {
           <div className="container mx-auto px-4">
             <div className="grid gap-12 md:grid-cols-2 items-center">
               <div className="relative aspect-square overflow-hidden rounded-xl">
-                <img src="/about.png" alt="Designer portrait" className="object-cover h-full w-full" />
+                <img src="/about.png" alt="portrait" className="object-cover h-full w-full" />
               </div>
               <div>
                 <h2 className="mb-6 text-3xl font-bold tracking-tighter sm:text-4xl">About Me</h2>
                 <p className="mb-4 text-gray-600">
-                  I'm a passionate Frontend Developer with a strong focus on building clean, user-friendly, and 
-                  responsive web applications. I specialize in modern JavaScript frameworks like React, 
-                  and have hands-on experience turning UI/UX designs into high-performance, accessible interfaces. 
+                  I'm a passionate Frontend Developer with a strong focus on building clean, user-friendly, and
+                  responsive web applications. I specialize in modern JavaScript frameworks like React,
+                  and have hands-on experience turning UI/UX designs into high-performance, accessible interfaces.
                   I thrive in fast-paced environments where collaboration, problem-solving, and attention to detail are key.
                 </p>
                 <p className="mb-4 text-gray-600">
-                  Whether it's optimizing performance, crafting seamless animations, or ensuring cross-browser 
-                  compatibility, I take pride in delivering polished frontends that provide real value to users. 
-                  Always learning and evolving, I'm excited by new technologies and love translating ideas into 
+                  Whether it's optimizing performance, crafting seamless animations, or ensuring cross-browser
+                  compatibility, I take pride in delivering polished frontends that provide real value to users.
+                  Always learning and evolving, I'm excited by new technologies and love translating ideas into
                   interactive digital experiences.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -157,7 +163,9 @@ export default function Hero() {
           </div>
         </section>
 
-        <Certificate />
+        <section id="certificate" >
+          <Certificate/>
+        </section>
 
         <section id="contact" className="py-20">
           <div className="container mx-auto px-4">
