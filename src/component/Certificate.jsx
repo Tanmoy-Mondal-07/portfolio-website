@@ -25,13 +25,13 @@ export default function ScrollExpandSlider() {
     const width = useTransform(
       scrollYProgress,
       [start, quarter, middle, threeQuarter, end],
-      ["1%", "60%", "80%", "60%", "1%"]
+      ["1%", "80%", "80%", "80%", "1%"]
     );
 
     const right = useTransform(
       scrollYProgress,
       [start, quarter, middle, threeQuarter, end],
-      [`${6 - offset}%`, `20%`, `10%`, `20%`, `${99 - offset}%`]
+      [`${6 - offset}%`, `10%`, `10%`, `10%`, `${99 - offset}%`]
     );
 
     return { width, right };
