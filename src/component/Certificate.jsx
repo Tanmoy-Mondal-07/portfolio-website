@@ -16,12 +16,23 @@ export default function ScrollExpandSlider() {
 
   const transforms = images.map((_, i) => {
     const start = i / total;
+    const quarter = start + (0.25 / total);
     const middle = (i + 0.5) / total;
+    const threeQuarter = start + (0.75 / total);
     const end = (i + 1) / total;
-    const offset = i * 4;
+    const offset = i * 2;
 
-    const width = useTransform(scrollYProgress, [start, middle, end], ["2%", "100%", "2%"]);
-    const right = useTransform(scrollYProgress, [start, middle, end], [`${12 - offset}%`, `${6 - offset}%`, `${98 - offset}%`]);
+    const width = useTransform(
+      scrollYProgress,
+      [start, quarter, middle, threeQuarter, end],
+      ["1%", "60%", "80%", "60%", "1%"]
+    );
+
+    const right = useTransform(
+      scrollYProgress,
+      [start, quarter, middle, threeQuarter, end],
+      [`${6 - offset}%`, `20%`, `10%`, `20%`, `${99 - offset}%`]
+    );
 
     return { width, right };
   });
@@ -30,23 +41,42 @@ export default function ScrollExpandSlider() {
     <div
       ref={containerRef}
       style={{ height: `${total * 200}vh` }}
-      className="flex justify-center"
+      className="flex justify-center items-start bg-gradient-to-br from-indigo-50 to-white"
     >
-      <div className="sticky top-0 left-0 w-full h-screen flex flex-col justify-center items-center overflow-hidden bg-gray-100 text-gray-900">
-        <h2 className="mb-12 text-center text-5xl font-bold tracking-tight z-10">
+      <div className="sticky top-0 w-full h-screen flex flex-col justify-center items-center overflow-hidden relative">
+        {/* Decorative floating orbs */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(6)].map((_, idx) => (
+            <div
+              key={idx}
+              className="absolute bg-indigo-200/20 rounded-full animate-pulse"
+              style={{
+                width: `${Math.random() * 200 + 100}px`,
+                height: `${Math.random() * 200 + 100}px`,
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                animationDuration: `${Math.random() * 10 + 5}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        <h2 className="relative z-20 mb-12 text-center text-4xl md:text-4xl font-bold tracking-tight drop-shadow-lg">
           Certificate
         </h2>
-        <div className="relative w-[60vw] h-[60vh] flex items-center justify-center">
+        <div className="relative z-20 w-screen sm:w-[60vw] aspect-[16/9] max-w-5xl bg-white/70 backdrop-blur-lg border border-white/30 sm:rounded-2xl shadow-2xl overflow-hidden">
+          <div className="absolute inset-0 ring-1 ring-white/20 pointer-events-none" />
           {images.map((src, i) => (
             <motion.img
               key={i}
               src={src}
               alt={`Slide ${i}`}
-              className="absolute rounded-2xl shadow-xl h-full transition-all duration-700 ease-in-out"
+              className="absolute object-cover shadow-xl h-full transition-all duration-500 ease-in-out"
               style={{
                 width: transforms[i].width,
                 right: transforms[i].right,
               }}
+              loading="lazy"
             />
           ))}
         </div>

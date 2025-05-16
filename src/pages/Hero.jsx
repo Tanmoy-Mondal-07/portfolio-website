@@ -61,7 +61,7 @@ export default function Hero() {
       </header>
 
       <main className="flex-1">
-        <section className="relative overflow-hidden py-24 md:py-16">
+        <section className="relative h-[90dvh] overflow-hidden py-24 md:py-16">
           <div className="container mx-auto flex flex-col items-center text-center px-4">
             <div className="absolute -z-10 -top-40 -left-8 md:-top-28 inset-0 opacity-90">
               {/* <img
@@ -102,7 +102,7 @@ export default function Hero() {
 
         <section id="projects" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
-            <h2 className="mb-12 text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            <h2 className="mb-12 text-center text-4xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Projects
             </h2>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -130,16 +130,16 @@ export default function Hero() {
               <div>
                 <h2 className="mb-6 text-3xl font-bold tracking-tighter sm:text-4xl">About Me</h2>
                 <p className="mb-4 text-gray-600">
-                  I am a designer and artist specializing in minimalist aesthetics inspired by traditional Japanese art
-                  forms, particularly Yabusame and sumi-e silhouette designs.
+                  I'm a passionate Frontend Developer with a strong focus on building clean, user-friendly, and 
+                  responsive web applications. I specialize in modern JavaScript frameworks like React, 
+                  and have hands-on experience turning UI/UX designs into high-performance, accessible interfaces. 
+                  I thrive in fast-paced environments where collaboration, problem-solving, and attention to detail are key.
                 </p>
                 <p className="mb-4 text-gray-600">
-                  My work seeks to bridge the gap between ancient artistic traditions and contemporary design needs,
-                  creating visual experiences that are both timeless and relevant.
-                </p>
-                <p className="mb-6 text-gray-600">
-                  With over a decade of experience in design, I’ve collaborated with brands and individuals who value
-                  simplicity, elegance, and meaningful visual communication.
+                  Whether it's optimizing performance, crafting seamless animations, or ensuring cross-browser 
+                  compatibility, I take pride in delivering polished frontends that provide real value to users. 
+                  Always learning and evolving, I'm excited by new technologies and love translating ideas into 
+                  interactive digital experiences.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="rounded-full border border-black px-6 py-3 hover:bg-gray-100 transition-colors">
