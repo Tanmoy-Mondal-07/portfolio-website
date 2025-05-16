@@ -1,12 +1,13 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import testImage from "../assets/Dantethumbnail.png";
+import nptel from "../assets/certificate/nptel.png";
+import Hack2skill from "../assets/certificate/Hack2skill.png";
+import hackathon from "../assets/certificate/hackathon.png";
 
 const images = [
-  testImage,
-  testImage,
-  testImage,
-  testImage,
+  nptel,
+  hackathon,
+  Hack2skill,
 ];
 
 export default function ScrollExpandSlider() {
