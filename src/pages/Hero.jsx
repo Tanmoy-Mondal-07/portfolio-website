@@ -61,7 +61,7 @@ export default function Hero() {
       </header>
 
       <main className="flex-1">
-        <section className="relative h-[90dvh] overflow-hidden py-24 md:py-16">
+        <section className="relative h-[90dvh] sm:h-[100dvh] overflow-hidden py-24 md:py-16">
           <div className="container mx-auto flex flex-col items-center text-center px-4">
             <div className="absolute -z-10 -top-40 -left-8 md:-top-28 inset-0 opacity-90">
               {/* <img
