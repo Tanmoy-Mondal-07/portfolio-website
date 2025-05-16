@@ -43,7 +43,7 @@ export default function ScrollExpandSlider() {
       style={{ height: `${total * 200}vh` }}
       className="flex justify-center items-start bg-gradient-to-br from-indigo-50 to-white"
     >
-      <div className="sticky top-0 w-full h-screen flex flex-col justify-center items-center overflow-hidden relative">
+      <div className="sticky top-0 w-full h-screen flex flex-col justify-center items-center overflow-hidden">
         {/* Decorative floating orbs */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(6)].map((_, idx) => (
@@ -61,7 +61,7 @@ export default function ScrollExpandSlider() {
           ))}
         </div>
 
-        <h2 className="relative z-20 mb-12 text-center text-4xl md:text-4xl font-bold tracking-tight drop-shadow-lg">
+        <h2 className="relative z-20 mb-12 sm:mb-4 text-center text-4xl md:text-6xl font-bold tracking-tight drop-shadow-lg">
           Certificate
         </h2>
         <div className="relative z-20 w-screen sm:w-[60vw] aspect-[16/9] max-w-5xl bg-white/70 backdrop-blur-lg border border-white/30 sm:rounded-2xl shadow-2xl overflow-hidden">
