@@ -61,7 +61,7 @@ const BackgroundParticles = () => {
   const { viewport } = useThree();
   const textures = useLoader(TextureLoader, [iconsvg1, iconsvg2, iconsvg3, iconsvg4, iconsvg5, iconsvg6, iconsvg7, iconsvg8]);
 
-  const particleCount = 80;
+  const particleCount = 100;
   const particles = useMemo(() => {
     return new Array(particleCount).fill().map(() => ({
       texture: textures[Math.floor(Math.random() * textures.length)],
