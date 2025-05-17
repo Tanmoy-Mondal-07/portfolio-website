@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <ParticleCanvas/>
+      {/* <ParticleCanvas/> */}
       <Hero/>
     </>
   )

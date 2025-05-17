@@ -7,14 +7,15 @@ import myLogo from "../assets/logo00.svg";
 import background from "../assets/pngegg.png";
 import DanteThumbnail from "../assets/Dantethumbnail.png";
 import Certificate from "../component/Certificate";
+import HeroSection from "../component/HeroSection";
 
 export default function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50 text-gray-800">
+    <div className="flex min-h-screen flex-col text-gray-800">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full bg-white bg-opacity-60 backdrop-blur-md shadow-md">
+      <header className="fixed top-0 z-50 w-full bg-white bg-opacity-60 backdrop-blur-md shadow-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
           <a href="/" className="flex items-center gap-3">
             <img src={myLogo} alt="Tanmoy Logo" className="h-10 w-10" />
@@ -65,6 +66,11 @@ export default function Hero() {
 
       {/* Main Content */}
       <main className="flex-1">
+
+        {/* <section className="h-dvh overflow-hidden">
+          <HeroSection />
+        </section> */}
+
         {/* Hero Section */}
         {/* <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500"> */}
         <section className="relative flex h-[100dvh] items-center justify-center overflow-hidden">
@@ -106,7 +112,6 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Decorative Blobs */}
           <div className="absolute bottom-0 left-0 -mb-32 -ml-32 h-96 w-96 rounded-full bg-indigo-300 opacity-50 blur-3xl" />
           <div className="absolute top-0 right-0 -mt-32 -mr-32 h-80 w-80 rounded-full bg-pink-300 opacity-40 blur-2xl" />
         </section>
@@ -179,7 +184,7 @@ export default function Hero() {
         {/* Certificate & Contact */}
         <section id="certificate">
           {/* <div className="container mx-auto px-6"> */}
-            <Certificate />
+          <Certificate />
           {/* </div> */}
         </section>
 
