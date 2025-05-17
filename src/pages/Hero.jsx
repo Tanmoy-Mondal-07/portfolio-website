@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import ProjectCard from "../component/ProjectCard";
 import ContactForm from "../component/ContactForm";
 import myLogo from "../assets/logo00.svg";
-import background from "../assets/pngegg.png";
+// import background from "../assets/pngegg.png";
 import DanteThumbnail from "../assets/Dantethumbnail.png";
 import Certificate from "../component/Certificate";
-import HeroSection from "../component/HeroSection";
+// import HeroSection from "../component/HeroSection";
 
 export default function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -144,7 +144,7 @@ export default function Hero() {
             >
               <div className="aspect-square overflow-hidden rounded-2xl shadow-lg">
                 {/* <img src="/about.png" alt="About" className="h-full w-full object-cover" /> */}
-                <HeroSection />
+                {/* <HeroSection /> */}
               </div>
             </motion.div>
             <motion.div
