@@ -7,7 +7,6 @@ import myLogo from "../assets/logo00.svg";
 // import background from "../assets/pngegg.png";
 import DanteThumbnail from "../assets/Dantethumbnail.png";
 import Certificate from "../component/Certificate";
-// import HeroSection from "../component/HeroSection";
 
 export default function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -66,10 +65,6 @@ export default function Hero() {
 
       {/* Main Content */}
       <main className="flex-1">
-
-        {/* <section className="h-dvh overflow-hidden">
-          <HeroSection />
-        </section> */}
 
         {/* Hero Section */}
         {/* <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500"> */}
