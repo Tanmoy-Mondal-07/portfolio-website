@@ -143,7 +143,8 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
             >
               <div className="aspect-square overflow-hidden rounded-2xl shadow-lg">
-                <img src="/about.png" alt="About" className="h-full w-full object-cover" />
+                {/* <img src="/about.png" alt="About" className="h-full w-full object-cover" /> */}
+                <HeroSection />
               </div>
             </motion.div>
             <motion.div

@@ -1,0 +1,23 @@
+.animate-fade-slide-in {
+  animation: fade-slide-in 0.2s ease-out forwards;
+}
+
+@keyframes fade-slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(25px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(-2px);
+  }
+
+  80% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
