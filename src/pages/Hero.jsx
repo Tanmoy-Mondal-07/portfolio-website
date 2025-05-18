@@ -17,7 +17,7 @@ export default function Hero() {
       <header className="fixed top-0 z-50 w-full bg-white bg-opacity-60 backdrop-blur-md shadow-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
           <a href="/" className="flex items-center gap-3">
-            <img src={myLogo} alt="Tanmoy Logo" className="h-10 w-10" />
+            {/* <img src={myLogo} alt="Tanmoy Logo" className="h-10 w-10" /> */}
             <span className="text-xl font-semibold tracking-wide">TANMOY MONDAL</span>
           </a>
 
