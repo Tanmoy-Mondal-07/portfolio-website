@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 html{
-    width: 100dvw;
+    width: 100svw;
     overflow-x: hidden;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 html::-webkit-scrollbar {
