@@ -5,8 +5,9 @@ import ProjectCard from "../component/ProjectCard";
 import ContactForm from "../component/ContactForm";
 import myLogo from "../assets/logo00.svg";
 // import background from "../assets/pngegg.png";
-import DanteThumbnail from "../assets/Dantethumbnail.png";
+import DanteThumbnail from "../assets/projects/Dantethumbnail.png";
 import Certificate from "../component/Certificate";
+import aboutImage from "../assets/leo.jpg";
 
 export default function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -138,7 +139,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
             >
               <div className="aspect-square overflow-hidden rounded-2xl shadow-lg">
-                {/* <img src="/about.png" alt="About" className="h-full w-full object-cover" /> */}
+                <img loading="lazy" src={aboutImage} alt="About" className="h-full w-full object-cover" />
                 {/* <HeroSection /> */}
               </div>
             </motion.div>
