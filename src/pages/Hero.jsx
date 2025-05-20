@@ -6,6 +6,7 @@ import ContactForm from "../component/ContactForm";
 import myLogo from "../assets/logo00.svg";
 // import background from "../assets/pngegg.png";
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png";
+import PaperCut from "../assets/projects/papercut.png";
 import Certificate from "../component/Certificate";
 import aboutImage from "../assets/leo.jpg";
 
@@ -125,7 +126,16 @@ export default function Hero() {
                 imageSrc={DanteThumbnail}
                 href="https://dantetestserver.pages.dev/"
               />
-              {/* More ProjectCards... */}
+
+              <ProjectCard
+                title="Papercut Show"
+                description="Built a scroll-driven paper cut animation using React and Framer Motion.
+                            spring-based transitions and parallax effects.
+                            dynamic background color changes to reflect time-of-day progression."
+                imageSrc={PaperCut}
+                href=""
+              />
+
             </div>
           </div>
         </section>
