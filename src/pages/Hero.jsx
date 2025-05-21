@@ -1,4 +1,4 @@
-import { ArrowRight, GithubIcon, Linkedin, Mail, Menu, Twitter, User2 } from "lucide-react";
+import { ArrowRight, GithubIcon, Image, Linkedin, Mail, Menu, Twitter, User2 } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../component/ProjectCard";
@@ -8,13 +8,13 @@ import myLogo from "../assets/logo00.svg";
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png";
 import PaperCut from "../assets/projects/papercut.png";
 import Certificate from "../component/Certificate";
-import aboutImage from "../assets/leo.jpg";
 
 export default function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   return (
     <div className="flex min-h-screen flex-col text-gray-800">
+
       {/* Header */}
       <header className="fixed top-0 z-50 w-full bg-white bg-opacity-60 backdrop-blur-md shadow-md">
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
@@ -68,6 +68,10 @@ export default function Hero() {
       {/* Main Content */}
       <main className="flex-1">
 
+        <div className="w-full bg-yellow-100 text-yellow-800 text-center py-2 text-sm font-medium z-50 fixed top-15 left-0">
+            🚧 This website is currently in early development. Some sections may be incomplete or subject to change. 🚧
+          </div>
+
         {/* Hero Section */}
         {/* <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500"> */}
         <section className="relative flex h-[100lvh] items-center justify-center overflow-hidden">
@@ -82,7 +86,7 @@ export default function Hero() {
               alt="Tanmoy"
               className="mx-auto mt-10 mb-4 h-48 w-48 rounded-full border-4 border-white shadow-lg"
             /> */}
-            <User2 stroke="gray" className="mx-auto mt-10 mb-4 h-48 w-48 rounded-full border-4 border-white shadow-lg" />
+            <Image stroke="gray" className="mx-auto mt-10 mb-4 h-48 w-48 rounded-full border-4 border-white shadow-lg" />
             <div className="flex flex-col items-center justify-center text-center px-4">
               <h1 className="mb-4 text-5xl font-extrabold text-zinc-800 md:text-6xl">
                 Frontend Developer
@@ -150,8 +154,9 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
             >
               <div className="aspect-square overflow-hidden rounded-2xl shadow-lg">
-                <img loading="lazy" src={aboutImage} alt="About" className="h-full w-full object-cover" />
+                {/* <img loading="lazy" src={aboutImage} alt="About" className="h-full w-full object-cover" /> */}
                 {/* <HeroSection /> */}
+                <Image className="h-full w-full object-cover" />
               </div>
             </motion.div>
             <motion.div
@@ -201,6 +206,9 @@ export default function Hero() {
             <h2 className="mb-8 text-center text-3xl font-bold text-gray-800">
               Contact
             </h2>
+            <p className="mb-6 text-sm text-green-700 bg-green-100 px-4 py-2 rounded shadow text-center">
+              📬 The contact section is fully functional — feel free to reach out to me anytime!
+            </p>
             <ContactForm />
           </div>
         </section>

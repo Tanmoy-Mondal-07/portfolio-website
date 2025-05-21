@@ -71,13 +71,13 @@ export default function ScrollExpandSlider() {
             <motion.img
               key={i}
               src={src}
+              loading="lazy"
               alt={`Slide ${i}`}
               className="absolute object-cover shadow-xl h-full transition-all duration-500 ease-in-out"
               style={{
                 width: transforms[i].width,
                 right: transforms[i].right,
               }}
-              loading="lazy"
             />
           ))}
         </div>
