@@ -1,4 +1,4 @@
-import { ArrowRight, GithubIcon, Linkedin, Mail, Menu, Twitter } from "lucide-react";
+import { ArrowRight, GithubIcon, Linkedin, Mail, Menu, Twitter, User2 } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../component/ProjectCard";
@@ -77,11 +77,12 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="z-10 text-center px-6"
           >
-            <img
+            {/* <img
               src={myLogo}
               alt="Tanmoy"
-              className="mx-auto mb-4 h-48 w-48 rounded-full border-4 border-white shadow-lg"
-            />
+              className="mx-auto mt-10 mb-4 h-48 w-48 rounded-full border-4 border-white shadow-lg"
+            /> */}
+            <User2 stroke="gray" className="mx-auto mt-10 mb-4 h-48 w-48 rounded-full border-4 border-white shadow-lg" />
             <div className="flex flex-col items-center justify-center text-center px-4">
               <h1 className="mb-4 text-5xl font-extrabold text-zinc-800 md:text-6xl">
                 Frontend Developer
