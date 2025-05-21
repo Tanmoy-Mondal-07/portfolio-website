@@ -70,7 +70,7 @@ export default function Hero() {
 
         {/* Hero Section */}
         {/* <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500"> */}
-        <section className="relative flex h-[100dvh] items-center justify-center overflow-hidden">
+        <section className="relative flex h-[100lvh] items-center justify-center overflow-hidden">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -1,4 +1,4 @@
-const cacheName = 'portfolio-cache-v1.0.0';
+const cacheName = 'portfolio-cache-v1.0.2';
 
 self.addEventListener('install', (e) => {
     // console.log('Service Worker: Installed');
