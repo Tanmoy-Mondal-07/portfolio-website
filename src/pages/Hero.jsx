@@ -8,6 +8,8 @@ import myLogo from "../assets/logo00.svg";
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png";
 import PaperCut from "../assets/projects/papercut.png";
 import Certificate from "../component/Certificate";
+import Resume from '../assets/Resume/Resume.pdf'
+import Skills from "../component/Skills";
 
 export default function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -69,8 +71,8 @@ export default function Hero() {
       <main className="flex-1">
 
         <div className="w-full bg-yellow-100 text-yellow-800 text-center py-2 text-sm font-medium z-50 fixed top-15 left-0">
-            🚧 This website is currently in early development. Some sections may be incomplete or subject to change. 🚧
-          </div>
+          🚧 This website is currently in early development. Some sections may be incomplete or subject to change. 🚧
+        </div>
 
         {/* Hero Section */}
         {/* <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500"> */}
@@ -114,8 +116,8 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <div className="absolute bottom-0 left-0 -mb-32 -ml-32 h-96 w-96 rounded-full bg-indigo-300 opacity-50 blur-3xl" />
-          <div className="absolute top-0 right-0 -mt-32 -mr-32 h-80 w-80 rounded-full bg-pink-300 opacity-40 blur-2xl" />
+          {/* <div className="absolute bottom-0 left-0 -mb-32 -ml-32 h-96 w-96 rounded-full bg-indigo-300 opacity-50 blur-3xl" /> */}
+          {/* <div className="absolute top-0 right-0 -mt-32 -mr-32 h-80 w-80 rounded-full bg-pink-300 opacity-40 blur-2xl" /> */}
         </section>
 
         {/* Projects Section */}
@@ -144,6 +146,9 @@ export default function Hero() {
             </div>
           </div>
         </section>
+
+        {/* Skills Section  */}
+        <Skills />
 
         {/* About Section */}
         <section id="about" className="py-20 bg-gray-50">
@@ -175,7 +180,7 @@ export default function Hero() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="/resume.pdf"
+                  href={Resume}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full border border-gray-600 px-6 py-3 font-medium text-gray-600 hover:bg-gray-100 transition"
