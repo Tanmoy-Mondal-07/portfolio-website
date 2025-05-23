@@ -128,7 +128,7 @@ function Hero() {
                     className={`text-lg font-medium transition-colors ${
                       activeSection === item.href.substring(1) ? "text-slate-800" : "text-slate-600"
                     }`}
-                    onClick={() => setMobileNavOpen(false)}
+                    onClick={() => setTimeout(() => setMobileNavOpen(false), 1000)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                   >
