@@ -6,7 +6,7 @@ import ContactForm from "../component/ContactForm"
 import Skills from "../component/Skills"
 import Certificate from "../component/Certificate"
 import useMobile from "../hooks/use-mobile"
-import myLogo from "../assets/logo00.svg"
+import myLogo from "../assets/logo01.svg"
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png"
 import PaperCut from "../assets/projects/papercut.png"
 import Resume from "../assets/Resume/Resume.pdf"
@@ -67,11 +67,11 @@ function Hero() {
       <header className="fixed top-0 z-40 w-full bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300">
         <div className="container mx-auto flex h-16 items-center justify-between px-6">
           <a href="#home" className="flex items-center gap-3 group">
-            <img
+            {/* <img
               src={myLogo}
               alt="Tanmoy Logo"
-              className="h-10 w-10 transition-transform duration-500 group-hover:rotate-180"
-            />
+              className="h-10 w-10 transition-transform duration-500 group-hover:fill-red-600"
+            /> */}
             <span className="text-xl font-semibold tracking-wide text-zinc-800">TANMOY MONDAL</span>
           </a>
 
@@ -475,10 +475,10 @@ function Hero() {
                 </span>
               </h2>
               <div className="w-24 h-1 bg-zinc-700 mx-auto rounded-full"></div>
-              <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+              {/* <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
                 Have a project in mind or want to discuss potential opportunities? I'd love to hear from you! Fill out
                 the form below and I'll get back to you as soon as possible.
-              </p>
+              </p> */}
             </motion.div>
 
             <motion.div
