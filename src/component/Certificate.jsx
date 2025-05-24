@@ -50,7 +50,7 @@ function ScrollExpandSlider() {
     <div
       ref={containerRef}
       style={{ height: `${total * 200}vh` }}
-      className="flex justify-center items-start bg-slate-50"
+      className="flex justify-center items-start bg-zinc-50"
     >
       <div className="sticky top-0 w-full h-screen flex flex-col justify-center items-center overflow-hidden">
         {/* Reduce number of decorative elements */}
@@ -58,7 +58,7 @@ function ScrollExpandSlider() {
           {[...Array(3)].map((_, idx) => (
             <motion.div
               key={idx}
-              className="absolute rounded-full"
+              className="absolute opacity-60 rounded-full shadow-lg"
               style={{
                 width: `${Math.random() * 200 + 100}px`,
                 height: `${Math.random() * 200 + 100}px`,
@@ -87,15 +87,15 @@ function ScrollExpandSlider() {
           transition={{ duration: 0.8 }}
           className="relative z-10 mb-12 text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold text-slate-800">
-            <span className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+          <h2 className="mb-4 text-4xl font-bold text-zinc-800">
+            <span className="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
               Certificates
             </span>
           </h2>
-          <div className="w-24 h-1 bg-slate-700 mx-auto rounded-full"></div>
-          <p className="mt-6 text-slate-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-zinc-700 mx-auto rounded-full"></div>
+          {/* <p className="mt-6 text-zinc-600 max-w-2xl mx-auto">
             Scroll to explore my professional certifications and achievements
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="relative z-20 w-screen sm:w-[60vw] aspect-[16/9] max-w-5xl bg-white/70 backdrop-blur-lg border border-white/30 sm:rounded-2xl shadow-2xl overflow-hidden">

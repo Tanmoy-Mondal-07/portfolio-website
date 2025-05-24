@@ -79,7 +79,7 @@ export default function ContactForm() {
 
       <div className="grid gap-6 sm:grid-cols-2">
         <div className="space-y-2">
-          <label htmlFor="name" className="text-sm font-medium text-slate-700">
+          <label htmlFor="name" className="text-sm font-medium text-zinc-700">
             Name
           </label>
           <input
@@ -89,11 +89,11 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Your name"
             required
-            className="w-full rounded-lg border border-slate-200 px-4 py-3 focus:border-slate-500 focus:ring-2 focus:ring-slate-200 outline-none transition-all"
+            className="w-full rounded-lg border border-zinc-200 px-4 py-3 focus:border-zinc-500 focus:ring-2 focus:ring-zinc-200 outline-none transition-all"
           />
         </div>
         <div className="space-y-2">
-          <label htmlFor="email" className="text-sm font-medium text-slate-700">
+          <label htmlFor="email" className="text-sm font-medium text-zinc-700">
             Email
           </label>
           <input
@@ -103,13 +103,13 @@ export default function ContactForm() {
             onChange={handleChange}
             placeholder="Your email"
             required
-            className="w-full rounded-lg border border-slate-200 px-4 py-3 focus:border-slate-500 focus:ring-2 focus:ring-slate-200 outline-none transition-all"
+            className="w-full rounded-lg border border-zinc-200 px-4 py-3 focus:border-zinc-500 focus:ring-2 focus:ring-zinc-200 outline-none transition-all"
           />
         </div>
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="subject" className="text-sm font-medium text-slate-700">
+        <label htmlFor="subject" className="text-sm font-medium text-zinc-700">
           Subject
         </label>
         <input
@@ -119,12 +119,12 @@ export default function ContactForm() {
           onChange={handleChange}
           placeholder="What is this regarding?"
           required
-          className="w-full rounded-lg border border-slate-200 px-4 py-3 focus:border-slate-500 focus:ring-2 focus:ring-slate-200 outline-none transition-all"
+          className="w-full rounded-lg border border-zinc-200 px-4 py-3 focus:border-zinc-500 focus:ring-2 focus:ring-zinc-200 outline-none transition-all"
         />
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="message" className="text-sm font-medium text-slate-700">
+        <label htmlFor="message" className="text-sm font-medium text-zinc-700">
           Message
         </label>
         <textarea
@@ -132,14 +132,14 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Your message..."
-          className="w-full rounded-lg border border-slate-200 px-4 py-3 focus:border-slate-500 focus:ring-2 focus:ring-slate-200 outline-none transition-all min-h-[150px]"
+          className="w-full rounded-lg border border-zinc-200 px-4 py-3 focus:border-zinc-500 focus:ring-2 focus:ring-zinc-200 outline-none transition-all min-h-[150px]"
           required
         />
       </div>
 
       <motion.button
         type="submit"
-        className="w-full rounded-lg bg-slate-800 px-6 py-3 text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center"
+        className="w-full rounded-lg bg-zinc-800 px-6 py-3 text-white shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center"
         disabled={isSubmitting}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}

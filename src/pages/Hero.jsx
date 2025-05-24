@@ -59,7 +59,7 @@ function Hero() {
     <div className="flex min-h-screen flex-col text-gray-800 bg-gradient-to-br from-gray-50 to-white">
       {/* Progress Bar */}
       <div
-        className="fixed top-0 left-0 h-1 bg-slate-700 z-50 transition-all duration-300"
+        className="fixed top-0 left-0 h-1 bg-zinc-700 z-50 transition-all duration-300"
         style={{ width: `${scrollProgress * 100}%` }}
       />
 
@@ -72,7 +72,7 @@ function Hero() {
               alt="Tanmoy Logo"
               className="h-10 w-10 transition-transform duration-500 group-hover:rotate-180"
             />
-            <span className="text-xl font-semibold tracking-wide text-slate-800">TANMOY MONDAL</span>
+            <span className="text-xl font-semibold tracking-wide text-zinc-800">TANMOY MONDAL</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -81,15 +81,13 @@ function Hero() {
               <a
                 key={item.name}
                 href={item.href}
-                className={`relative px-2 py-1 text-sm font-medium transition-colors ${
-                  activeSection === item.href.substring(1) ? "text-slate-800" : "text-slate-600 hover:text-slate-800"
-                }`}
+                className={`relative px-2 py-1 text-sm font-medium transition-colors ${activeSection === item.href.substring(1) ? "text-zinc-800" : "text-zinc-600 hover:text-zinc-800"
+                  }`}
               >
                 {item.name}
                 <span
-                  className={`absolute bottom-0 left-0 h-0.5 bg-slate-800 transition-all duration-300 ${
-                    activeSection === item.href.substring(1) ? "w-full" : "w-0"
-                  }`}
+                  className={`absolute bottom-0 left-0 h-0.5 bg-zinc-800 transition-all duration-300 ${activeSection === item.href.substring(1) ? "w-full" : "w-0"
+                    }`}
                 ></span>
               </a>
             ))}
@@ -97,11 +95,11 @@ function Hero() {
 
           {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden p-2 hover:bg-slate-100 rounded-full transition"
+            className="md:hidden p-2 hover:bg-zinc-100 rounded-full transition"
             aria-label="Toggle menu"
             onClick={() => setMobileNavOpen(!mobileNavOpen)}
           >
-            <Menu className="h-6 w-6 text-slate-800" />
+            <Menu className="h-6 w-6 text-zinc-800" />
           </button>
         </div>
 
@@ -125,9 +123,8 @@ function Hero() {
                   <motion.a
                     key={item.name}
                     href={item.href}
-                    className={`text-lg font-medium transition-colors ${
-                      activeSection === item.href.substring(1) ? "text-slate-800" : "text-slate-600"
-                    }`}
+                    className={`text-lg font-medium transition-colors ${activeSection === item.href.substring(1) ? "text-zinc-800" : "text-zinc-600"
+                      }`}
                     onClick={() => setTimeout(() => setMobileNavOpen(false), 1000)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -142,19 +139,19 @@ function Hero() {
       </header>
 
       {/* Development Banner */}
-      <div className="w-full bg-amber-50 text-amber-800 text-center py-2 text-sm font-medium z-30 fixed top-16 left-0">
+      {/* <div className="w-full bg-amber-50 text-amber-800 text-center py-2 text-sm font-medium z-30 fixed top-16 left-0">
         🚧 This website is currently in development. Some sections may be incomplete or subject to change. 🚧
-      </div>
+      </div> */}
 
       {/* Main Content */}
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-8">
         {/* Hero Section */}
         <section id="home" className="relative flex min-h-screen items-center justify-center overflow-hidden pt-8">
           {/* Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-slate-100/30 blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-slate-200/30 blur-3xl"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-slate-100/20 blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-zinc-100/30 blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-zinc-200/30 blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -tranzinc-x-1/2 -tranzinc-y-1/2 w-96 h-96 rounded-full bg-zinc-100/20 blur-3xl"></div>
           </div>
 
           <motion.div
@@ -167,9 +164,9 @@ function Hero() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="mx-auto mt-10 mb-8 relative"
+              className="mx-auto mb-8 relative"
             >
-              <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-slate-700 p-1 shadow-lg">
+              <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-gray-200 p-1 shadow-lg">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
                   <img
                     src=""
@@ -194,7 +191,7 @@ function Hero() {
               className="flex flex-col items-center justify-center text-center px-4"
             >
               <h1 className="mb-4 text-5xl font-extrabold md:text-6xl lg:text-7xl">
-                <span className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
                   Frontend Developer
                 </span>
               </h1>
@@ -214,7 +211,7 @@ function Hero() {
                 href="https://github.com/Tanmoy-Mondal-07"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-6 py-3 font-medium text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-zinc-800 px-6 py-3 font-medium text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <GithubIcon className="h-5 w-5" />
                 View Github
@@ -222,7 +219,7 @@ function Hero() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-slate-300 px-6 py-3 font-medium text-slate-700 hover:border-slate-400 hover:text-slate-800 hover:shadow-md transition-all duration-300"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-zinc-300 px-6 py-3 font-medium text-zinc-700 hover:border-zinc-400 hover:text-zinc-800 hover:shadow-md transition-all duration-300"
               >
                 <Mail className="h-5 w-5" />
                 Contact Me
@@ -269,11 +266,11 @@ function Hero() {
               className="mb-16 text-center"
             >
               <h2 className="mb-4 text-4xl font-bold text-gray-800">
-                <span className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
                   Projects
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-slate-700 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-zinc-700 mx-auto rounded-full"></div>
               {/* <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
                 A showcase of my recent work, demonstrating my skills in frontend development, UI/UX design, and
                 problem-solving.
@@ -338,7 +335,7 @@ function Hero() {
                 href="https://github.com/Tanmoy-Mondal-07"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-slate-700 hover:text-slate-900 font-medium transition-colors"
+                className="inline-flex items-center gap-2 text-zinc-700 hover:text-zinc-900 font-medium transition-colors"
               >
                 View more projects on GitHub
                 <ExternalLink className="h-4 w-4" />
@@ -356,8 +353,8 @@ function Hero() {
         <section id="about" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-slate-100/40 blur-3xl"></div>
-            <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-slate-200/40 blur-3xl"></div>
+            <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-zinc-100/40 blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-zinc-200/40 blur-3xl"></div>
           </div>
 
           <div className="container mx-auto px-6 relative z-10">
@@ -369,11 +366,11 @@ function Hero() {
               className="mb-16 text-center"
             >
               <h2 className="mb-4 text-4xl font-bold text-gray-800">
-                <span className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
                   About Me
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-slate-700 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-zinc-700 mx-auto rounded-full"></div>
             </motion.div>
 
             <div className="grid gap-12 md:grid-cols-2 items-center">
@@ -383,7 +380,7 @@ function Hero() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="aspect-square overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-slate-500 to-slate-700 p-1">
+                <div className="aspect-square overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-zinc-500 to-zinc-700 p-1">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
                     <img
                       src=""
@@ -421,7 +418,7 @@ function Hero() {
                       "Problem-solving mindset",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="mr-2 text-slate-600">•</span>
+                        <span className="mr-2 text-zinc-600">•</span>
                         <span className="text-gray-600">{item}</span>
                       </li>
                     ))}
@@ -433,14 +430,14 @@ function Hero() {
                     href={Resume}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-slate-500 px-6 py-3 font-medium text-slate-600 hover:bg-slate-50 transition-colors"
+                    className="inline-flex items-center gap-2 rounded-full border border-zinc-500 px-6 py-3 font-medium text-zinc-600 hover:bg-zinc-50 transition-colors"
                   >
                     <Download className="h-5 w-5" />
                     Download Resume
                   </a>
                   <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-slate-600 to-slate-800 px-6 py-3 font-medium text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-zinc-600 to-zinc-800 px-6 py-3 font-medium text-white hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     <Mail className="h-5 w-5" />
                     Get in Touch
@@ -460,8 +457,8 @@ function Hero() {
         <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
           {/* Background decoration */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-slate-100/40 blur-3xl"></div>
-            <div className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-slate-200/40 blur-3xl"></div>
+            <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-zinc-100/40 blur-3xl"></div>
+            <div className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-zinc-200/40 blur-3xl"></div>
           </div>
 
           <div className="container mx-auto px-6 max-w-4xl relative z-10">
@@ -473,11 +470,11 @@ function Hero() {
               className="mb-16 text-center"
             >
               <h2 className="mb-4 text-4xl font-bold text-gray-800">
-                <span className="bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
                   Get In Touch
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-slate-700 mx-auto rounded-full"></div>
+              <div className="w-24 h-1 bg-zinc-700 mx-auto rounded-full"></div>
               <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
                 Have a project in mind or want to discuss potential opportunities? I'd love to hear from you! Fill out
                 the form below and I'll get back to you as soon as possible.
@@ -491,9 +488,9 @@ function Hero() {
               transition={{ duration: 0.6 }}
               className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100"
             >
-              <p className="mb-6 text-sm text-green-700 bg-green-50 px-4 py-3 rounded-lg shadow-sm">
+              {/* <p className="mb-6 text-sm text-green-700 bg-green-50 px-4 py-3 rounded-lg shadow-sm">
                 📬 The contact section is fully functional — feel free to reach out to me anytime!
-              </p>
+              </p> */}
               <ContactForm />
 
               <div className="mt-12 pt-8 border-t border-gray-100">
@@ -547,7 +544,7 @@ function Hero() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img src={myLogo} alt="Tanmoy Logo" className="h-10 w-10" />
-                <span className="text-xl font-semibold tracking-wide bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+                <span className="text-xl font-semibold tracking-wide bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
                   TANMOY MONDAL
                 </span>
               </div>
@@ -559,19 +556,19 @@ function Hero() {
                   href="https://github.com/Tanmoy-Mondal-07"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-slate-700 transition-colors"
+                  className="text-gray-500 hover:text-zinc-700 transition-colors"
                 >
                   <GithubIcon className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-slate-700 transition-colors">
+                <a href="#" className="text-gray-500 hover:text-zinc-700 transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-slate-700 transition-colors">
+                <a href="#" className="text-gray-500 hover:text-zinc-700 transition-colors">
                   <Twitter className="h-6 w-6" />
                 </a>
                 <a
                   href="mailto:your.email@example.com"
-                  className="text-gray-500 hover:text-slate-700 transition-colors"
+                  className="text-gray-500 hover:text-zinc-700 transition-colors"
                 >
                   <Mail className="h-6 w-6" />
                 </a>
@@ -583,7 +580,7 @@ function Hero() {
               <ul className="space-y-2">
                 {navItems.map((item) => (
                   <li key={item.name}>
-                    <a href={item.href} className="text-gray-600 hover:text-slate-700 transition-colors">
+                    <a href={item.href} className="text-gray-600 hover:text-zinc-700 transition-colors">
                       {item.name}
                     </a>
                   </li>
@@ -595,7 +592,7 @@ function Hero() {
               <h3 className="text-lg font-semibold mb-4 text-gray-800">Contact</h3>
               <ul className="space-y-2 text-gray-600">
                 <li>Burdwan, India</li>
-                {/* <li>your.email@example.com</li> */}
+                {/* <li>email@example.com</li> */}
                 {/* <li>+91 XXXXX XXXXX</li> */}
               </ul>
             </div>
