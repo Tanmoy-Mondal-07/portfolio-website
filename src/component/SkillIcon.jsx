@@ -1,7 +1,7 @@
 import { useRef, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
-export default function SkillIcon({ name, icon }) {
+export default function SkillIcon({ name, icon, color }) {
   const tileRef = useRef(null);
   const [activeRipple, setActiveRipple] = useState(null);
 
@@ -23,8 +23,7 @@ export default function SkillIcon({ name, icon }) {
           style={{
             width: "500px",
             height: "500px",
-            background:
-              "radial-gradient(circle, rgba(51, 65, 85, 0.55) 0%, rgba(51, 65, 85, 0) 80%)",
+            background: `radial-gradient(circle, ${color} 0%, rgba(255, 255, 255, 0) 80%)`,
             borderRadius: "50%",
             zIndex: 0,
           }}

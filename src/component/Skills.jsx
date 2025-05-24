@@ -1,20 +1,20 @@
 import { useRef, useCallback, useState } from "react"
-import { motion } from "framer-motion"
+import { color, motion } from "framer-motion"
 import SkillIcon from "./SkillIcon"
 
 const skillData = [
-  { name: "JavaScript", link: "https://cdn.simpleicons.org/javascript" },
-  { name: "TypeScript", link: "https://cdn.simpleicons.org/typescript" },
-  { name: "Tailwind", link: "https://cdn.simpleicons.org/tailwindcss" },
-  { name: "React", link: "https://cdn.simpleicons.org/react" },
-  { name: "Redux", link: "https://cdn.simpleicons.org/redux" },
-  { name: "Axios", link: "https://cdn.simpleicons.org/axios" },
-  { name: "Appwrite", link: "https://cdn.simpleicons.org/appwrite" },
-  { name: "Postman", link: "https://cdn.simpleicons.org/postman" },
-  { name: "Python", link: "https://cdn.simpleicons.org/python" },
-  { name: "Git", link: "https://cdn.simpleicons.org/git" },
-  { name: "Cloudflare", link: "https://cdn.simpleicons.org/cloudflare" },
-  { name: "Arch Linux", link: "https://cdn.simpleicons.org/archlinux" },
+  { name: "JavaScript", link: "https://cdn.simpleicons.org/javascript", color: "rgba(247, 223, 30, 0.8)" },
+  { name: "TypeScript", link: "https://cdn.simpleicons.org/typescript", color: "rgba(0, 122, 204, 0.8)" },
+  { name: "Tailwind", link: "https://cdn.simpleicons.org/tailwindcss", color: "rgba(56, 189, 248, 0.8)" },
+  { name: "React", link: "https://cdn.simpleicons.org/react", color: "rgba(97, 218, 251, 0.8)" },
+  { name: "Redux", link: "https://cdn.simpleicons.org/redux", color: "rgba(118, 74, 188, 0.8)" },
+  { name: "Axios", link: "https://cdn.simpleicons.org/axios", color: "rgba(90, 103, 216, 0.8)" },
+  { name: "Appwrite", link: "https://cdn.simpleicons.org/appwrite", color: "rgba(255, 0, 153, 0.8)" },
+  { name: "Postman", link: "https://cdn.simpleicons.org/postman", color: "rgba(255, 89, 43, 0.8)" },
+  { name: "Python", link: "https://cdn.simpleicons.org/python", color: "rgba(53, 114, 165, 0.8)" },
+  { name: "Git", link: "https://cdn.simpleicons.org/git", color: "rgba(240, 80, 51, 0.8)" },
+  { name: "Cloudflare", link: "https://cdn.simpleicons.org/cloudflare", color: "rgba(255, 123, 0, 0.8)" },
+  { name: "Arch Linux", link: "https://cdn.simpleicons.org/archlinux", color: "rgba(33, 142, 190, 0.8)" },
 
   // { name: "HTML", link: "https://cdn.simpleicons.org/html5/334155" },
   // { name: "CSS", link: "https://cdn.simpleicons.org/css3/334155" },
@@ -65,6 +65,7 @@ export default function Skills() {
             >
               <SkillIcon
                 name={skill.name}
+                color={skill.color}
                 icon={getSkillIcon(skill.link, skill.name)}
                 index={index}
               />
