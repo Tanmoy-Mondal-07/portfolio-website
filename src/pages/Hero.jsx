@@ -190,14 +190,14 @@ function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="flex flex-col items-center justify-center text-center px-4"
             >
-              <h1 className="mb-4 text-5xl font-extrabold md:text-6xl lg:text-7xl">
+              <h1 className="mb-4 text-4xl font-extrabold md:text-6xl lg:text-7xl">
                 <span className="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
                   Frontend Developer
                 </span>
               </h1>
               <p className="mb-8 max-w-2xl text-lg text-gray-600 leading-relaxed">
                 Building lean, minimalist solutions that prioritize simplicity and functionality.
-                <span className="italic block mt-2">True elegance arises from clarity of design.</span>
+                {/* <span className="italic block mt-2">True elegance arises from clarity of design.</span> */}
               </p>
             </motion.div>
 
@@ -412,7 +412,6 @@ function Hero() {
                   <ul className="space-y-2">
                     {[
                       "Modern frontend development with React",
-                      "Responsive UI/UX design",
                       "Performance optimization",
                       "Clean, maintainable code",
                       "Problem-solving mindset",
@@ -549,7 +548,7 @@ function Hero() {
                 </span>
               </div>
               <p className="text-gray-600 mb-6">
-                Frontend developer specializing in creating elegant, responsive web applications.
+                Frontend developer specializing in creating minimal, elegant, responsive web applications.
               </p>
               <div className="flex gap-4">
                 <a
