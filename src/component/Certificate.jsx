@@ -54,7 +54,7 @@ function ScrollExpandSlider() {
     >
       <div className="sticky top-0 w-full h-screen flex flex-col justify-center items-center overflow-hidden">
         {/* Reduce number of decorative elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        {/* <div className="absolute inset-0 overflow-hidden">
           {[...Array(3)].map((_, idx) => (
             <motion.div
               key={idx}
@@ -78,7 +78,7 @@ function ScrollExpandSlider() {
               }}
             />
           ))}
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

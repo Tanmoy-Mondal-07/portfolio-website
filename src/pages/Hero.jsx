@@ -10,6 +10,7 @@ import myLogo from "../assets/logo01.svg"
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png"
 import PaperCut from "../assets/projects/papercut.png"
 import Resume from "../assets/Resume/Resume.pdf"
+import profilePic from '../assets/logo00.svg'
 
 function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
@@ -169,7 +170,7 @@ function Hero() {
               <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-gray-200 p-1 shadow-lg">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
                   <img
-                    src=""
+                    src={profilePic}
                     alt="Tanmoy"
                     className="w-full h-full object-cover"
                   />
