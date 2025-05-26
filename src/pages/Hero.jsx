@@ -9,6 +9,7 @@ import useMobile from "../hooks/use-mobile"
 import myLogo from "../assets/logo01.svg"
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png"
 import PaperCut from "../assets/projects/papercut.png"
+import tanmoyWebsite from "../assets/projects/tanmoyWebsite.png"
 import Resume from "../assets/Resume/Resume.pdf"
 import profilePic from '../assets/logo00.png'
 
@@ -283,21 +284,6 @@ function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <ProjectCard
-                  title="Dante"
-                  description="Dante is a minimalist social media app built with React.js and Appwrite, designed for a fast and smooth user experience."
-                  imageSrc={DanteThumbnail}
-                  href="https://dantetestserver.pages.dev/"
-                  tags={["React", "Appwrite", "Tailwind CSS"]}
-                />
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <ProjectCard
@@ -313,12 +299,27 @@ function Hero() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <ProjectCard
+                  title="Dante ⭐"
+                  description="Dante is a minimalist social media app built with React.js and Appwrite, designed for a fast and smooth user experience."
+                  imageSrc={DanteThumbnail}
+                  href="https://dantetestserver.pages.dev/"
+                  tags={["React", "Appwrite", "Tailwind CSS"]}
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <ProjectCard
                   title="Portfolio Website"
                   description="My personal portfolio website built with React, Tailwind CSS, and Framer Motion, showcasing my projects and skills."
-                  imageSrc=""
+                  imageSrc={tanmoyWebsite}
                   href="#"
                   tags={["React", "Tailwind CSS", "Framer Motion"]}
                 />
