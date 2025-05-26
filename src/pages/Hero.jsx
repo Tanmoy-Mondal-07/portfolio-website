@@ -10,7 +10,7 @@ import myLogo from "../assets/logo01.svg"
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png"
 import PaperCut from "../assets/projects/papercut.png"
 import Resume from "../assets/Resume/Resume.pdf"
-import profilePic from '../assets/logo00.svg'
+import profilePic from '../assets/logo00.png'
 
 function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
