@@ -141,9 +141,9 @@ function Hero() {
       </header>
 
       {/* Development Banner */}
-      {/* <div className="w-full bg-amber-50 text-amber-800 text-center py-2 text-sm font-medium z-30 fixed top-16 left-0">
+      <div className="w-full bg-amber-50 text-amber-800 text-center py-2 text-sm font-medium z-30 fixed top-16 left-0">
         🚧 This website is currently in development. Some sections may be incomplete or subject to change. 🚧
-      </div> */}
+      </div>
 
       {/* Main Content */}
       <main className="flex-1 pt-8">
