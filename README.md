@@ -1,5 +1,5 @@
 <div align="left" style="position: relative;">
-<img src="./src/assets/logo01.svg" align="right" width="15%" style="margin: 50px 20px 0 -40px;">
+<!-- <img src="./src/assets/logo01.svg" align="right" width="15%" style="margin: 50px 20px 0 -40px;"> -->
 <h1>PORTFOLIO-WEBSITE</h1>
 <p align="left">
 	<!-- <img src="https://img.shields.io/github/license/Tanmoy-Mondal-07/portfolio-website?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license"> -->
