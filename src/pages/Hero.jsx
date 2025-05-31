@@ -290,7 +290,7 @@ function Hero() {
                   title="Papercut Show"
                   description="Built a scroll-driven paper cut animation using React and Framer Motion with spring-based transitions and parallax effects."
                   imageSrc={PaperCut}
-                  href="#"
+                  href="https://paper-cut-show.vercel.app/"
                   tags={["React", "Framer Motion", "Animation"]}
                 />
               </motion.div>
