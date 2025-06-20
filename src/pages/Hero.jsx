@@ -13,7 +13,7 @@ import tanmoyWebsite from "../assets/projects/tanmoyWebsite.png"
 import Resume from "../assets/Resume/Resume.pdf"
 import profilePic from '../assets/Resume/profilepic.png'
 import aboutImage from '../assets/background.jpg'
-import uiBgImage from '../assets/bgwall.jpg'
+// import uiBgImage from '../assets/bgwall.jpg'
 
 function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
