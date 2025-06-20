@@ -11,7 +11,9 @@ import DanteThumbnail from "../assets/projects/Dantethumbnail.png"
 import PaperCut from "../assets/projects/papercut.png"
 import tanmoyWebsite from "../assets/projects/tanmoyWebsite.png"
 import Resume from "../assets/Resume/Resume.pdf"
-import profilePic from '../assets/logo00.png'
+import profilePic from '../assets/Resume/profilepic.png'
+import aboutImage from '../assets/background.jpg'
+import uiBgImage from '../assets/bgwall.jpg'
 
 function Hero() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
@@ -141,9 +143,9 @@ function Hero() {
       </header>
 
       {/* Development Banner */}
-      <div className="w-full bg-amber-50 text-amber-800 text-center py-2 text-sm font-medium z-30 fixed top-16 left-0">
+      {/* <div className="w-full bg-amber-50 text-amber-800 text-center py-2 text-sm font-medium z-30 fixed top-16 left-0">
         🚧 This website is currently in development. Some sections may be incomplete or subject to change. 🚧
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <main className="flex-1 pt-8">
@@ -385,7 +387,7 @@ function Hero() {
                 <div className="aspect-square overflow-hidden rounded-2xl shadow-lg bg-gradient-to-br from-zinc-500 to-zinc-700 p-1">
                   <div className="w-full h-full bg-white rounded-2xl overflow-hidden">
                     <img
-                      src=""
+                      src={aboutImage}
                       alt="About Tanmoy"
                       className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                     />
@@ -507,7 +509,7 @@ function Hero() {
                     <span>GitHub</span>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/tanmoy-mondal-290695296/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors"
@@ -515,7 +517,7 @@ function Hero() {
                     <Linkedin className="h-5 w-5" />
                     <span>LinkedIn</span>
                   </a>
-                  <a
+                  {/* <a
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -523,14 +525,14 @@ function Hero() {
                   >
                     <Twitter className="h-5 w-5" />
                     <span>Twitter</span>
-                  </a>
-                  <a
+                  </a> */}
+                  {/* <a
                     href="mailto:your.email@example.com"
                     className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors"
                   >
                     <Mail className="h-5 w-5" />
                     <span>Email</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </motion.div>
@@ -555,24 +557,22 @@ function Hero() {
               <div className="flex gap-4">
                 <a
                   href="https://github.com/Tanmoy-Mondal-07"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="text-gray-500 hover:text-zinc-700 transition-colors"
                 >
                   <GithubIcon className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-zinc-700 transition-colors">
+                <a href="https://www.linkedin.com/in/tanmoy-mondal-290695296/" className="text-gray-500 hover:text-zinc-700 transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </a>
-                <a href="#" className="text-gray-500 hover:text-zinc-700 transition-colors">
+                {/* <a href="#" className="text-gray-500 hover:text-zinc-700 transition-colors">
                   <Twitter className="h-6 w-6" />
                 </a>
                 <a
-                  href="mailto:your.email@example.com"
+                  href="#"
                   className="text-gray-500 hover:text-zinc-700 transition-colors"
                 >
                   <Mail className="h-6 w-6" />
-                </a>
+                </a> */}
               </div>
             </div>
 
