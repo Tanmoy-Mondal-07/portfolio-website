@@ -401,7 +401,7 @@ function Hero() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="mb-6 text-3xl font-bold text-gray-800">Frontend Developer & UI Enthusiast</h3>
+                <h3 className="mb-6 text-3xl font-bold text-gray-800">Frontend Developer</h3>
                 <p className="mb-4 text-gray-600 leading-relaxed">
                   I'm a passionate Frontend Developer specializing in creating clean, responsive web applications using
                   modern technologies like React, Tailwind CSS, and Framer Motion.
