@@ -282,20 +282,7 @@ function Hero() {
             </motion.div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                <ProjectCard
-                  title="Papercut Show"
-                  description="Built a scroll-driven paper cut animation using React and Framer Motion with spring-based transitions and parallax effects."
-                  imageSrc={PaperCut}
-                  href="https://paper-cut-show.vercel.app/"
-                  tags={["React", "Framer Motion", "Animation"]}
-                />
-              </motion.div>
+              {/* projects */}
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -324,6 +311,21 @@ function Hero() {
                   imageSrc={tanmoyWebsite}
                   href="#"
                   tags={["React", "Tailwind CSS", "Framer Motion"]}
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <ProjectCard
+                  title="Papercut Show"
+                  description="Built a scroll-driven paper cut animation using React and Framer Motion with spring-based transitions and parallax effects."
+                  imageSrc={PaperCut}
+                  href="https://paper-cut-show.vercel.app/"
+                  tags={["React", "Framer Motion", "Animation"]}
                 />
               </motion.div>
             </div>
