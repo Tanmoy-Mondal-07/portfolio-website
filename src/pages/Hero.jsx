@@ -11,7 +11,7 @@ import DanteThumbnail from "../assets/projects/Dantethumbnail.png"
 import PaperCut from "../assets/projects/papercut.png"
 import ClgLibery from "../assets/projects/clglibery.png"
 import tanmoyWebsite from "../assets/projects/tanmoyWebsite.png"
-import Resume from "../assets/Resume/Resume.pdf"
+import Resume from "../assets/Resume/Ruseme_2.0.pdf"
 import profilePic from '../assets/Resume/profilepic.png'
 import aboutImage from '../assets/background.jpg'
 // import uiBgImage from '../assets/bgwall.jpg'
