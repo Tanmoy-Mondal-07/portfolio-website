@@ -9,6 +9,7 @@ import useMobile from "../hooks/use-mobile"
 import myLogo from "../assets/logo01.svg"
 import DanteThumbnail from "../assets/projects/Dantethumbnail.png"
 import PaperCut from "../assets/projects/papercut.png"
+import ClgLibery from "../assets/projects/clglibery.png"
 import tanmoyWebsite from "../assets/projects/tanmoyWebsite.png"
 import Resume from "../assets/Resume/Resume.pdf"
 import profilePic from '../assets/Resume/profilepic.png'
@@ -296,6 +297,20 @@ function Hero() {
                   imageSrc={DanteThumbnail}
                   href="https://dantetestserver.pages.dev/"
                   tags={["React", "Appwrite", "Tailwind CSS"]}
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <ProjectCard
+                  title="College Library Management"
+                  description="Built with PHP, this system provides separate access for admins, students, and teachers to manage book inventory, user records, and borrowing activities efficiently."
+                  imageSrc={ClgLibery}
+                  tags={["PHP", "HTML", "CSS"]}
                 />
               </motion.div>
 

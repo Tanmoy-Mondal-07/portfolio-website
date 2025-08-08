@@ -31,16 +31,19 @@ export default function ProjectCard({ title, description, imageSrc, href, tags =
         <h3 className="mb-2 text-xl font-semibold text-zinc-800 group-hover:text-zinc-900 transition-colors duration-300">
           {title}
         </h3>
-        <p className="mb-4 text-sm text-zinc-600">{description}</p>
-        <a
+        <p className="mb-4 h-20 text-sm text-zinc-600 line-clamp-4">{description}</p>
+        {href ? <a
           href={href}
           className="inline-flex items-center text-sm font-medium text-zinc-700 hover:text-zinc-900 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           View Project
           <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:tranzinc-x-1 group-hover:-tranzinc-y-1" />
-        </a>
+        </a> : <a disabled={true}
+          className="line-through inline-flex items-center text-sm font-medium text-zinc-600"
+        >
+          View Project
+          <ArrowUpRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:tranzinc-x-1 group-hover:-tranzinc-y-1" />
+        </a>}
       </div>
     </motion.div>
   )
