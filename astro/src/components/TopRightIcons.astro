@@ -1,0 +1,38 @@
+---
+const icons = [
+  { name: 'home',link:"", color: 'emerald-400', icon: 'fa-brands fa-github' },
+  { name: 'linkedin',link:"", color: 'orange-400', icon: 'fa-brands fa-twitter' },
+];
+---
+
+<section class="icon-container flex w-full justify-center gap-4">
+  {icons.map(({ name,link, color, icon }) => (
+    <div
+      class={`icon relative inline-flex h-10 w-10 cursor-pointer items-center justify-center overflow-hidden rounded-full transition-all duration-300 group`}
+    >
+      <!-- ::before -->
+      <div
+        class={`absolute inset-0 rounded-full border border-${color} transition-all duration-500 group-hover:scale-150 group-hover:bg-${color}/30`}
+      ></div>
+
+      <!-- ::after (optional layer) -->
+      <div
+        class={`absolute inset-0 rounded-full border border-${color}/50 opacity-0 group-hover:opacity-100 transition-all duration-500`}
+      ></div>
+
+      <!-- Icon -->
+      <i class={`${icon} text-lg text-zinc-800 relative z-10 transition-transform duration-300 group-hover:scale-110`}></i>
+    </div>
+  ))}
+</section>
+
+<style>
+.icon-container {
+  height: 4rem;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+}
+</style>

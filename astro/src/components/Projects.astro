@@ -1,0 +1,69 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import clgliberyImage from "../../public/projectsImage/clglibery.png";
+import DanteImage from "../../public/projectsImage/Dantethumbnail.png";
+import papercutImage from "../../public/projectsImage/papercut.png";
+import tanmoyWebsiteImage from "../../public/projectsImage/tanmoyWebsite.png";
+---
+
+<section id="projects" class="py-24 bg-white relative overflow-hidden">
+    <!-- Soft Gradient Background Blobs -->
+    <div
+        class="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-200/40 to-pink-200/40 rounded-bl-full blur-3xl"
+    >
+    </div>
+    <div
+        class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-200/40 to-purple-200/40 rounded-tr-full blur-3xl"
+    >
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <!-- Title -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900">
+                <span
+                    class="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent"
+                >
+                    Projects
+                </span>
+            </h2>
+            <div class="w-24 h-1 bg-zinc-800 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Project Grid -->
+        <div
+            class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 place-items-start"
+        >
+            <ProjectCard
+                title="Social Media App"
+                description="Dante is a minimalist social media app built with React.js and Appwrite, designed for a fast and smooth user experience."
+                imageSrc={DanteImage}
+                href="https://dantetestserver.pages.dev/"
+                tags={["React", "Appwrite", "Tailwind CSS"]}
+            />
+
+            <ProjectCard
+                title="College Library Management"
+                description="Built with PHP, this system provides separate access for admins, students, and teachers to manage book inventory and borrowing activities."
+                imageSrc={clgliberyImage}
+                tags={["PHP", "HTML", "CSS"]}
+            />
+
+            <ProjectCard
+                title="Portfolio Website"
+                description="My personal portfolio website built with React, Tailwind CSS, and Framer Motion, showcasing my projects and skills."
+                imageSrc={tanmoyWebsiteImage}
+                href="#"
+                tags={["React", "Tailwind CSS", "Framer Motion"]}
+            />
+
+            <ProjectCard
+                title="Papercut Show"
+                description="Scroll-based paper cut animation made using React and Framer Motion with parallax and spring animations."
+                imageSrc={papercutImage}
+                href="https://paper-cut-show.vercel.app/"
+                tags={["React", "Framer Motion", "Animation"]}
+            />
+        </div>
+    </div>
+</section>

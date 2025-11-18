@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+import myLogo from "../../public/logo01.svg";
+import astrologo from "../../public/favicon.svg";
+
+const navItems = [
+    { name: "Home", href: "#home" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contactForm" },
+];
+---
+
+<footer class="border-t bg-white py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+
+            <!-- Brand Section -->
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <Image src={myLogo} alt="Tanmoy Logo" class="h-10 w-10" />
+                    <span class="text-xl font-semibold tracking-wide bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
+                        TANMOY MONDAL
+                    </span>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Fullstack developer focused on building fast, elegant and user-centric digital experiences.
+                </p>
+
+                <div class="flex gap-4 text-xl">
+                    <a href="https://github.com/" class="text-gray-500 hover:text-zinc-800 transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/" class="text-gray-500 hover:text-zinc-800 transition">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Navigation</h3>
+                <ul class="space-y-2">
+                    {navItems.map((item) => (
+                        <li>
+                            <a
+                                href={item.href}
+                                class="text-gray-600 hover:text-zinc-800 transition-colors"
+                            >
+                                {item.name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Let's Connect</h3>
+                <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                    Have a project in mind or want to collaborate?  
+                    Feel free to drop a message anytime.
+                </p>
+                <a 
+                    href="#contactForm"
+                    class="inline-block mt-3 text-sm font-medium text-zinc-800 underline hover:text-black"
+                >
+                    Contact Me →
+                </a>
+            </div>
+
+            <!-- Powered By -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Built With</h3>
+                <div class="flex items-center gap-3">
+                    <Image
+                        src={astrologo}
+                        alt="Astro Logo"
+                        height="28"
+                        width="28"
+                        class="opacity-90"
+                    />
+                    <span class="text-gray-700 font-medium">Astro Framework</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="mt-16 pt-8 border-t border-gray-100 text-center">
+            <p class="text-gray-600 text-sm">
+                © {new Date().getFullYear()} Tanmoy Mondal. Crafted with passion.
+            </p>
+        </div>
+    </div>
+</footer>
