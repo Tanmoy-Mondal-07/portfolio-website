@@ -7,9 +7,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   env: {
     schema: {
-      EMAIL_SERVICE_ID: envField.string({ context: "client", access: "public"}),
-      EMAIL_TEMPLATE_ID: envField.string({ context: "client", access: "public"}),
-      EMAIL_PUBLIC_KEY: envField.string({ context: "client", access: "public"}),
+      VITE_EMAIL_SERVICE_ID: envField.string({ context: "client", access: "public"}),
+      VITE_EMAIL_TEMPLATE_ID: envField.string({ context: "client", access: "public"}),
+      VITE_EMAIL_PUBLIC_KEY: envField.string({ context: "client", access: "public"}),
     }
   },
 

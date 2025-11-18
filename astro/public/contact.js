@@ -1,7 +1,7 @@
 import {
-    EMAIL_SERVICE_ID,
-    EMAIL_TEMPLATE_ID,
-    EMAIL_PUBLIC_KEY,
+    VITE_EMAIL_SERVICE_ID,
+    VITE_EMAIL_TEMPLATE_ID,
+    VITE_EMAIL_PUBLIC_KEY,
 } from "astro:env/client";
 
 export function setupContactForm() {
@@ -31,9 +31,9 @@ export function setupContactForm() {
         };
 
         const payload = {
-            service_id: EMAIL_SERVICE_ID,
-            template_id: EMAIL_TEMPLATE_ID,
-            user_id: EMAIL_PUBLIC_KEY,
+            service_id: VITE_EMAIL_SERVICE_ID,
+            template_id: VITE_EMAIL_TEMPLATE_ID,
+            user_id: VITE_EMAIL_PUBLIC_KEY,
             template_params: formData,
         };
 
