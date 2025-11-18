@@ -53,7 +53,7 @@ export default function ContactForm() {
     }
 
     return (
-        <div id="contactForm" class="min-h-screen py-16 px-4 sm:px-6 lg:px-8 flex items-start sm:items-center justify-center">
+        <div id="contactForm" className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 flex items-start sm:items-center justify-center">
     <div class="w-full max-w-xl">
         <div class="text-center mb-10">
             <h2 class="text-4xl font-bold text-gray-900">
