@@ -2,14 +2,14 @@
 import { Image } from "astro:assets";
 // import TopRightIcons from "../components/TopRightIcons.astro";
 import logo from "../../public/logo01.svg";
-import astrologo from "../../public/favicon.svg";
+// import astrologo from "../../public/favicon.svg";
 ---
 
 <section
     id="home"
     class="relative flex min-h-screen items-center justify-center overflow-hidden"
 >
-    <div class="z--10 top-0 left-[-280px] opacity-65 absolute">
+    <div class="hidden sm:block z--10 top-0 left-[-280px] opacity-65 absolute">
         <Image src={logo} alt="website icon" height="800" width="800" />
     </div>
 
@@ -122,7 +122,7 @@ import astrologo from "../../public/favicon.svg";
 
         <!-- Scroll indicator -->
         <div
-            class="absolute bottom-[-5] left-1/2 -translate-x-1/2 animate-fadeIn delay-700"
+            class="absolute bottom-[-10] left-1/2 -translate-x-1/2 animate-fadeIn delay-700"
         >
             <div class="flex flex-col items-center animate-bounceSlow">
                 <div
