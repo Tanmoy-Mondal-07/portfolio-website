@@ -5,7 +5,9 @@ import HeroSection from "../components/LandingPage.astro";
 import Projects from "../components/Projects.astro";
 import SkillsIcon from "../components/SkillsIcon.astro";
 import Footer from "../components/Footer.astro";
+
 import "../styles/global.css";
+import ContactForm from "../components/ContactForm.jsx";
 ---
 
 <html lang="en">
@@ -32,7 +34,8 @@ import "../styles/global.css";
 			<Projects />
 			<SkillsIcon />
 			<AboutMe />
-			<ContactMe/>
+			<!-- <ContactMe/> -->
+			<ContactForm client:load/>
 			<Footer/>
 		</div>
 	</body>
