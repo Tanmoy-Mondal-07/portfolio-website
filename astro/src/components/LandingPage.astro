@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 // import TopRightIcons from "../components/TopRightIcons.astro";
 import logo from "../../public/logo01.svg";
-import profilepic from "../../public/profilepic.png.png";
+import profilepic from "../../public/profilepic.png";
 // import astrologo from "../../public/favicon.svg";
 ---
 
@@ -55,9 +55,9 @@ import profilepic from "../../public/profilepic.png.png";
                     class="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center"
                 >
                     <Image
-                        src="/profilepic.png"
-                        alt="Tanmoy"
-                        height="100" width="100"
+                        src={profilepic}
+                        alt="User profile photo of Tanmoy Mondal"
+                        height="200" width="200"
                         class="w-full h-full object-cover"
                     />
                 </div>

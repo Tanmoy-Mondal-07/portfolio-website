@@ -2,60 +2,56 @@
 import AboutMe from "../components/AboutMe.astro";
 import HeroSection from "../components/LandingPage.astro";
 import Projects from "../components/Projects.astro";
-// import SkillsIcon from "../components/SkillsIcon.astro";
+import SkillsIcon from "../components/SkillsIcon.astro";
 import Footer from "../components/Footer.astro";
 import Seo from "../components/Seo.astro";
 import "../styles/global.css";
 import ContactForm from "../components/ContactForm.jsx";
 ---
 
-<Seo
-	title="Tanmoy Mondal – Full-Stack MERN Developer"
-	description="Portfolio of Tanmoy Mondal, Full-Stack MERN Developer skilled in React, Node.js, MongoDB, Appwrite and scalable systems."
-	image="https://tanmoymondal.pages.dev/og-image.jpg"
-	url="https://tanmoymondal.pages.dev/"
-/>
-
-<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		"name": "Tanmoy Mondal",
-		"jobTitle": "Full-Stack MERN Developer",
-		"url": "https://tanmoymondal.pages.dev",
-		"sameAs": [
-			"https://github.com/Tanmoy-Mondal-07",
-			"https://www.linkedin.com/in/tanmoy-mondal07"
-		]
-	}
-</script>
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/logo01.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-		/>
-		<meta name="generator" content={Astro.generator} />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap"
-			rel="stylesheet"
-		/>
-		<title>Tanmoy Mondal</title>
-	</head>
+	<Seo
+		title="Tanmoy Mondal - Full-Stack MERN Developer"
+		description="Portfolio of Tanmoy Mondal, Full-Stack MERN Developer skilled in React, Node.js, MongoDB, Appwrite and scalable systems."
+		image="https://tanmoymondal.pages.dev/og-image.jpg"
+		url="https://tanmoymondal.pages.dev/"
+	/>
+
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/profilepic.png" />
+	<meta name="viewport" content="width=device-width" />
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+	/>
+	<meta name="generator" content={Astro.generator} />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap"
+		rel="stylesheet"
+	/>
+
 	<body>
 		<div
 			class="flex min-h-screen max-w-screen flex-col text-gray-800 bg-linear-to-br from-gray-100 to-gray-50"
 		>
 			<HeroSection />
 			<Projects />
-			<!-- <SkillsIcon /> -->
+			<SkillsIcon />
 			<AboutMe />
 			<ContactForm client:load />
 			<Footer />
 		</div>
-	</body>
+	</body><script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Tanmoy Mondal",
+			"jobTitle": "Full-Stack MERN Developer",
+			"url": "https://tanmoymondal.pages.dev",
+			"sameAs": [
+				"https://github.com/Tanmoy-Mondal-07",
+				"https://www.linkedin.com/in/tanmoy-mondal07"
+			]
+		}
+	</script>
 </html>
