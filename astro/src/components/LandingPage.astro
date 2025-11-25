@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 // import TopRightIcons from "../components/TopRightIcons.astro";
 import logo from "../../public/logo01.svg";
+import profilepic from "../../public/profilepic.png.png";
 // import astrologo from "../../public/favicon.svg";
 ---
 
@@ -9,8 +10,8 @@ import logo from "../../public/logo01.svg";
     id="home"
     class="relative flex min-h-screen items-center justify-center overflow-hidden"
 >
-    <div class="hidden sm:block z--10 top-0 left-[-280px] opacity-65 absolute">
-        <Image src={logo} alt="website icon" height="800" width="800" />
+    <div class="hidden sm:block z--10 top-0 left-[-280px] opacity-50 absolute">
+        <Image src={logo} alt="website icon" height="100" width="100" class="h-200 w-200" loading="lazy"/>
     </div>
 
     <!-- <div class="powered-container text-white font-bold hover:opacity-100 btn-family">
@@ -53,9 +54,10 @@ import logo from "../../public/logo01.svg";
                 <div
                     class="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center"
                 >
-                    <img
+                    <Image
                         src="/profilepic.png"
                         alt="Tanmoy"
+                        height="100" width="100"
                         class="w-full h-full object-cover"
                     />
                 </div>

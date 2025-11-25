@@ -2,17 +2,38 @@
 import AboutMe from "../components/AboutMe.astro";
 import HeroSection from "../components/LandingPage.astro";
 import Projects from "../components/Projects.astro";
-import SkillsIcon from "../components/SkillsIcon.astro";
+// import SkillsIcon from "../components/SkillsIcon.astro";
 import Footer from "../components/Footer.astro";
-
+import Seo from "../components/Seo.astro";
 import "../styles/global.css";
 import ContactForm from "../components/ContactForm.jsx";
 ---
 
+<Seo
+	title="Tanmoy Mondal – Full-Stack MERN Developer"
+	description="Portfolio of Tanmoy Mondal, Full-Stack MERN Developer skilled in React, Node.js, MongoDB, Appwrite and scalable systems."
+	image="https://tanmoymondal.pages.dev/og-image.jpg"
+	url="https://tanmoymondal.pages.dev/"
+/>
+
+<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Tanmoy Mondal",
+		"jobTitle": "Full-Stack MERN Developer",
+		"url": "https://tanmoymondal.pages.dev",
+		"sameAs": [
+			"https://github.com/Tanmoy-Mondal-07",
+			"https://www.linkedin.com/in/tanmoy-mondal07"
+		]
+	}
+</script>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo01.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<link
 			rel="stylesheet"
@@ -23,7 +44,7 @@ import ContactForm from "../components/ContactForm.jsx";
 			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Astro</title>
+		<title>Tanmoy Mondal</title>
 	</head>
 	<body>
 		<div
@@ -31,11 +52,10 @@ import ContactForm from "../components/ContactForm.jsx";
 		>
 			<HeroSection />
 			<Projects />
-			<SkillsIcon />
+			<!-- <SkillsIcon /> -->
 			<AboutMe />
-			<!-- <ContactMe/> -->
-			<ContactForm client:load/>
-			<Footer/>
+			<ContactForm client:load />
+			<Footer />
 		</div>
 	</body>
 </html>
