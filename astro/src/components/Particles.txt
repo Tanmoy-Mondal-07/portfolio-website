@@ -1,0 +1,148 @@
+---
+import P001 from "../../public/particles/001.svg";
+import P002 from "../../public/particles/002.svg";
+import P003 from "../../public/particles/003.svg";
+import P004 from "../../public/particles/004.svg";
+import P005 from "../../public/particles/005.svg";
+import P006 from "../../public/particles/006.svg";
+import P007 from "../../public/particles/007.svg";
+import P008 from "../../public/particles/008.svg";
+
+const particleImageUrls: string[] = [
+    P001.src,
+    P002.src,
+    P003.src,
+    P004.src,
+    P005.src,
+    P006.src,
+    P007.src,
+    P008.src,
+];
+---
+
+<canvas
+    id="particleCanvas"
+    class="inset-0 w-full h-full pointer-events-none z-0">
+</canvas>
+
+<script define:vars={{ particleImageUrls }}>
+
+    // --- CONFIGURATION ---
+    const CONFIG = {
+        particleCount: 10,
+        baseSpeedX: 0.5,
+        baseSpeedY: 1.0,
+        wobbleSpeed: 0.001,
+        wobbleAmplitude: 0.5,
+        opacity: 0.8,
+    };
+
+    const createParticleFactory = (images, initialWidth, initialHeight) => {
+        return function createParticle(initial = true) {
+            const p = {
+                x: 0,
+                y: 0,
+                speedX: 0,
+                speedY: 0,
+                size: 0,
+                alpha: 1,
+                image: images[Math.floor(Math.random() * images.length)],
+            };
+
+            const reset = (initial = false) => {
+                p.image = images[Math.floor(Math.random() * images.length)];
+                p.x = Math.random() * initialWidth;
+                p.y = initial ? Math.random() * initialHeight : -50;
+
+                p.speedX = (CONFIG.baseSpeedX + Math.random()) * 0.5;
+                p.speedY = CONFIG.baseSpeedY + Math.random() * 2;
+
+                const depth = Math.random();
+                p.size = 20 + depth * 10;
+                p.alpha = CONFIG.opacity * (0.5 + depth * 0.5);
+            };
+
+            const update = (time, width, height) => {
+                p.x += p.speedX + Math.sin(time * CONFIG.wobbleSpeed) * CONFIG.wobbleAmplitude;
+                p.y += p.speedY + Math.cos(time * CONFIG.wobbleSpeed) * CONFIG.wobbleAmplitude;
+
+                if (p.y > height + 50 || p.x > width + 50) {
+                    reset();
+                    p.x = Math.random() * width;
+                    p.y = -50;
+                }
+            };
+
+            const draw = (ctx) => {
+                ctx.globalAlpha = p.alpha;
+                ctx.drawImage(p.image, p.x, p.y, p.size, p.size);
+                ctx.globalAlpha = 1.0;
+            };
+
+            reset(initial);
+            return { ...p, reset, update, draw };
+        };
+    };
+
+    const initParticles = async () => {
+        const canvas = document.getElementById("particleCanvas");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        let particles = [];
+
+        // Resize handler
+        const handleResize = () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        };
+        window.addEventListener("resize", handleResize);
+        handleResize();
+
+        // Load images
+        const loadImages = (urls) =>
+            Promise.all(
+                urls.map(
+                    (src) =>
+                        new Promise((resolve, reject) => {
+                            const img = new Image();
+                            img.src = src;
+                            img.onload = () => resolve(img);
+                            img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
+                        })
+                )
+            );
+
+        try {
+            const loadedImages = await loadImages(particleImageUrls);
+
+            const createParticle = createParticleFactory(loadedImages, width, height);
+            particles = Array.from({ length: CONFIG.particleCount }, () => createParticle(true));
+        } catch (error) {
+            console.error("Particle initialization failed:", error);
+            return;
+        }
+
+        // Animation loop
+        const animate = () => {
+            const time = Date.now();
+            ctx.clearRect(0, 0, width, height);
+
+            for (const p of particles) {
+                p.update(time, width, height);
+                p.draw(ctx);
+            }
+
+            requestAnimationFrame(animate);
+        };
+
+        animate();
+    };
+
+    initParticles();
+</script>

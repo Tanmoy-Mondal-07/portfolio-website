@@ -4,14 +4,25 @@ import { Image } from "astro:assets";
 import logo from "../../public/logo01.svg";
 import profilepic from "../../public/profilepic.png";
 // import astrologo from "../../public/favicon.svg";
+// import Particles from "./particles.astro";
 ---
 
 <section
     id="home"
-    class="relative flex min-h-screen items-center justify-center overflow-hidden"
+    class="relative flex min-h-screen z-10 items-center justify-center overflow-hidden"
 >
+    <!-- <div class="top-0 left-0 overflow-hidden absolute w-screen h-screen -z-10">
+        <Particles />
+    </div> -->
     <div class="hidden sm:block z--10 top-0 left-[-280px] opacity-50 absolute">
-        <Image src={logo} alt="website icon" height="100" width="100" class="h-200 w-200" loading="lazy"/>
+        <Image
+            src={logo}
+            alt="website icon"
+            height="100"
+            width="100"
+            class="h-200 w-200"
+            loading="lazy"
+        />
     </div>
 
     <!-- <div class="powered-container text-white font-bold hover:opacity-100 btn-family">
@@ -57,7 +68,8 @@ import profilepic from "../../public/profilepic.png";
                     <Image
                         src={profilepic}
                         alt="User profile photo of Tanmoy Mondal"
-                        height="200" width="200"
+                        height="200"
+                        width="200"
                         class="w-full h-full object-cover"
                     />
                 </div>

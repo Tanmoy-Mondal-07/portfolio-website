@@ -92,7 +92,6 @@ const ParticleCanvas = () => {
       style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
       camera={{ position: [0, 0, 5], fov: 75 }}
     >
-      {/* <color attach="background" args={['#ffffff']} /> */}
       <ambientLight intensity={0.5} />
       <BackgroundParticles />
     </Canvas>
