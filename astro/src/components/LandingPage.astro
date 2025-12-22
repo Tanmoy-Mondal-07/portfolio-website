@@ -1,154 +1,111 @@
 ---
 import { Image } from "astro:assets";
-// import TopRightIcons from "../components/TopRightIcons.astro";
-import logo from "../../public/logo01.svg";
 import profilepic from "../../public/profilepic.png";
-// import astrologo from "../../public/favicon.svg";
-// import Particles from "./particles.astro";
+import Particles from "./Particles.astro";
+
+const navItems = [
+  { name: "Home", href: "#home" },
+  { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contactForm" },
+];
 ---
 
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 backdrop-blur bg-white/70 border-b border-zinc-200">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <span class="font-semibold text-zinc-800">Tanmoy</span>
+
+    <ul class="hidden md:flex items-center gap-6 text-sm text-zinc-600">
+      {navItems.map(item => (
+        <li>
+          <a
+            href={item.href}
+            class="hover:text-zinc-900 transition-colors"
+          >
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
 <section
-    id="home"
-    class="relative flex min-h-screen z-10 items-center justify-center overflow-hidden"
+  id="home"
+  class="relative bg-white min-h-screen flex items-center justify-center pt-20 overflow-hidden"
 >
-    <!-- <div class="top-0 left-0 overflow-hidden absolute w-screen h-screen -z-10">
-        <Particles />
-    </div> -->
-    <div class="hidden sm:block z--10 top-0 left-[-280px] opacity-50 absolute">
-        <Image
-            src={logo}
-            alt="website icon"
-            height="100"
-            width="100"
-            class="h-200 w-200"
-            loading="lazy"
-        />
+  <!-- Particles background -->
+  <div class="absolute inset-0 z-10">
+    <Particles />
+  </div>
+
+  <div class="z-10 text-center max-w-4xl px-4 animate-fadeIn">
+    <!-- Profile Picture -->
+    <div class="mx-auto mb-8 animate-slideUp">
+      <div class="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-gray-200 p-1 shadow-lg">
+        <div class="w-full h-full rounded-full overflow-hidden bg-white">
+          <Image
+            src={profilepic}
+            alt="User profile photo of Tanmoy Mondal"
+            width="200"
+            height="200"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
     </div>
 
-    <!-- <div class="powered-container text-white font-bold hover:opacity-100 btn-family">
-        Powered By
-        <Image
-            src={astrologo}
-            alt="Powered by Astro"
-            height="25"
-            width="25"
-            class="astro-logo"
-        />
-    </div> -->
+    <!-- Title -->
+    <h1 class="mb-4 text-4xl md:text-6xl font-extrabold animate-slideUp delay-200">
+      <span class="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent">
+        Tanmoy Mondal
+      </span>
+    </h1>
 
-    <!-- <div class="z-10 top-2 right-5 absolute">
-        <TopRightIcons />
-    </div> -->
+    <p class="mx-auto mb-10 max-w-xl text-lg md:text-xl text-zinc-500 font-light animate-slideUp delay-300">
+      Software Engineer crafting
+      <span class="text-zinc-900 font-normal">
+        refined digital experiences
+      </span>
+      through thoughtful full-stack development.
+    </p>
 
-    <!-- Background Elements -->
-    <div class="absolute inset-0 overflow-hidden">
-        <div
-            class="absolute top-20 left-10 w-64 h-64 rounded-full bg-zinc-100/30 blur-3xl"
-        >
-        </div>
-        <div
-            class="absolute bottom-20 right-10 w-80 h-80 rounded-full bg-zinc-200/30 blur-3xl"
-        >
-        </div>
-        <div
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-zinc-100/20 blur-3xl"
-        >
-        </div>
+    <!-- Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-6 animate-slideUp delay-400">
+      <a
+        href="https://github.com/Tanmoy-Mondal-07"
+        class="inline-flex items-center gap-2 min-w-44 rounded-full bg-zinc-800 px-6 py-3 text-white font-medium shadow-md hover:shadow-lg transition hover:scale-105"
+      >
+        <i class="fa-brands fa-github text-xl"></i>
+        View Github
+      </a>
+
+      <a
+        href="#contactForm"
+        class="inline-flex items-center min-w-44 gap-2 rounded-full px-6 py-3 font-medium text-zinc-700 border border-zinc-300 hover:text-zinc-900 hover:shadow-lg transition hover:scale-105"
+      >
+        <i class="fa-solid fa-paper-plane text-sm"></i>
+        Contact Me
+      </a>
     </div>
 
-    <div class="z-10 text-center px-6 max-w-4xl animate-fadeIn">
-        <!-- Profile Picture -->
-        <div class="mx-auto mb-8 relative animate-slideUp">
-            <div
-                class="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full bg-gray-200 p-1 shadow-lg"
-            >
-                <div
-                    class="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center"
-                >
-                    <Image
-                        src={profilepic}
-                        alt="User profile photo of Tanmoy Mondal"
-                        height="200"
-                        width="200"
-                        class="w-full h-full object-cover"
-                    />
-                </div>
-            </div>
-
-            <!-- Decorative elements -->
-            <div
-                class="absolute -top-4 -right-4 w-8 h-8 rounded-full bg-purple-200 animate-pulse"
-            >
-            </div>
-            <div
-                class="absolute -bottom-2 -left-2 w-6 h-6 rounded-full bg-pink-200 animate-pulse delay-500"
-            >
-            </div>
-        </div>
-
-        <!-- Title & Subtitle -->
-        <div
-            class="flex flex-col items-center justify-center text-center px-4 animate-slideUp delay-200"
-        >
-            <h1 class="mb-4 text-4xl font-extrabold md:text-6xl lg:text-6xl">
-                <span
-                    class="bg-gradient-to-r from-zinc-700 to-zinc-900 bg-clip-text text-transparent"
-                >
-                    Tanmoy Mondal
-                </span>
-            </h1>
-            <p class="mb-8 max-w-2xl text-lg text-gray-600 leading-relaxed">
-                Passionate Software Engineer with a focus on Fullstack
-                Development, dedicated to crafting robust and user-friendly
-                applications using my coding expertise.
-            </p>
-        </div>
-
-        <!-- Buttons -->
-        <div
-            class="flex flex-col sm:flex-row gap-4 justify-center text-center animate-slideUp delay-400"
-        >
-            <a
-                href="https://github.com/Tanmoy-Mondal-07"
-                class="inline-flex items-center justify-center gap-1 btn-family rounded-full bg-zinc-800 px-6 py-3 font-medium text-white shadow-md hover:shadow-lg transition-all duration-250 hover:scale-105"
-                ><i class="fa-brands fa-github text-2xl text-white"></i>
-                <!-- <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="h-5 w-5"
-                    viewBox="0 0 16 16"
-                >
-                    <path
-                        d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.67.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.12 0 0 .67-.22 2.2.82a7.55 7.55 0 012-.27c.68 0 1.36.09 2 .27 1.52-1.04 2.19-.82 2.19-.82.44 1.11.17 1.92.09 2.12.51.56.81 1.28.81 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
-                    ></path>
-                </svg> -->
-                View Github
-            </a>
-            <a
-                href="#contactForm"
-                class="inline-flex relative justify-center items-center gap-2 rounded-full px-6 py-3 font-medium
-                text-zinc-700 hover:border-zinc-400 hover:text-zinc-800 hover:shadow-lg
-                btn-three transition-all duration-250 hover:scale-105 btn-family"
-                ><i class="fa-solid fa-paper-plane text-sm text-zinc-800"></i>
-                Contact Me
-            </a>
-        </div>
-
-        <!-- Scroll indicator -->
-        <div
-            class="absolute bottom-[-10] left-1/2 -translate-x-1/2 animate-fadeIn delay-700"
-        >
-            <div class="flex flex-col items-center animate-bounceSlow">
-                <div
-                    class="w-6 h-10 border-2 border-gray-300 rounded-full flex justify-center p-1"
-                >
-                    <div
-                        class="w-2 h-2 bg-purple-500 rounded-full animate-scrollDot"
-                    >
-                    </div>
-                </div>
-                <span class="text-sm text-gray-500 mb-2">Scroll Down</span>
-            </div>
-        </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+      <div class="h-12 w-px bg-gradient-to-b from-zinc-200 to-transparent overflow-hidden">
+        <div class="h-1/2 bg-zinc-800 animate-scroll-line"></div>
+      </div>
     </div>
+  </div>
 </section>
+
+<style>
+@keyframes scroll-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+.animate-scroll-line {
+  animation: scroll-line 2.5s cubic-bezier(0.15, 0, 0.5, 1) infinite;
+}
+</style>
