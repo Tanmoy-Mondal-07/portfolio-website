@@ -3,8 +3,9 @@ import ProjectCard from "./ProjectCard.astro";
 import clgliberyImage from "../../public/projectsImage/clglibery.png";
 import DanteImage from "../../public/projectsImage/Dantethumbnail.png";
 // import papercutImage from "../../public/projectsImage/papercut.png";
-import tanmoyWebsiteImage from "../../public/og-image.png";
+import tanmoyWebsiteImage from "../../public/og-image.jpg";
 import videoStreming from "../../public/projectsImage/videoStreming.png";
+import messagingapp from "../../public/projectsImage/messageApp.png";
 ---
 
 <section id="projects" class="py-24 relative overflow-hidden">
@@ -36,6 +37,22 @@ import videoStreming from "../../public/projectsImage/videoStreming.png";
             class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 place-items-start"
         >
             <ProjectCard
+                title="Distributed Messaging Platform"
+                description="A highly scalable, real-time messaging system built with Next.js and Node.js, featuring Kafka-based event streaming, Redis-powered rate limiting, and Cassandra-backed message persistence. Designed to handle 50k+ concurrent users with horizontal scaling."
+                imageSrc={messagingapp}
+                href="https://github.com/Tanmoy-Mondal-07/Scalable_Chat_App"
+                tags={["Kafka", "Redis", "Cassandra", "Socket.IO", "NGINX"]}
+            />
+
+            <ProjectCard
+                title="Video-Streaming app"
+                description="A full-stack YouTube-style platform powered by Node.js, MongoDB, Cloudinary, and React.Enjoy smooth playback, efficient storage, and support for multiple video quality levels."
+                imageSrc={videoStreming}
+                href=""
+                tags={["Node.js", "MongoDB", "Cloudinary", "FFmpeg"]}
+            />
+
+            <ProjectCard
                 title="Social Media App"
                 description="Dante is a minimalist social media app built with React.js and Appwrite, designed for a fast and smooth user experience."
                 imageSrc={DanteImage}
@@ -57,14 +74,6 @@ import videoStreming from "../../public/projectsImage/videoStreming.png";
                 href="https://paper-cut-show.vercel.app/"
                 tags={["React", "Framer Motion", "Animation"]}
             /> -->
-
-            <ProjectCard
-                title="Video-Streaming app"
-                description="A full-stack YouTube-style platform powered by Node.js, MongoDB, Cloudinary, and React.Enjoy smooth playback, efficient storage, and support for multiple video quality levels."
-                imageSrc={videoStreming}
-                href=""
-                tags={["Node.js", "MongoDB", "Cloudinary"]}
-            />
 
             <ProjectCard
                 title="Portfolio Website"
